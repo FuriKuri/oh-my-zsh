@@ -9,10 +9,10 @@ FURI_BRACKET_COLOR="%{$fg[white]%}"
 FURI_RVM_COLOR="%{$fg[magenta]%}"
 
 if [ -e ~/.rvm/bin/rvm-prompt ]; then
-  FURI_RVM_="$FURI_BRACKET_COLOR"["$FURI_RVM_COLOR♦\${\$(~/.rvm/bin/rvm-prompt i v g)#ruby-}$FURI_BRACKET_COLOR"]"%{$reset_color%}"
+  FURI_RVM_="$FURI_BRACKET_COLOR"["$FURI_RVM_COLOR♦ \${\$(~/.rvm/bin/rvm-prompt i v g)#ruby-}$FURI_BRACKET_COLOR"]"%{$reset_color%}"
 else
   if which rbenv &> /dev/null; then
-    FURI_RVM_="$FURI_BRACKET_COLOR""$FURI_RVM_COLOR♦\${\$(rbenv version | sed -e 's/ (set.*$//' -e 's/^ruby-//')}$FURI_BRACKET_COLOR""%{$reset_color%}"
+    FURI_RVM_="$FURI_BRACKET_COLOR""$FURI_RVM_COLOR♦ \${\$(rbenv version | sed -e 's/ (set.*$//' -e 's/^ruby-//')}$FURI_BRACKET_COLOR""%{$reset_color%}"
   fi
 fi
 
